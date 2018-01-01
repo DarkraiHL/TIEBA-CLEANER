@@ -163,7 +163,7 @@ class Tieba:
     def login(self):
         print('这次不用输入前缀`Cookie:`了，直接复制后面的key-value对')
         #cookie = input('give me cookies[xxx=xxx; xxx=xxx]:')
-        cookie = 'Cookie:TIEBA_USERTYPE=59831fa6c442e0855c0a494b; bdshare_firstime=1488517940445; rpln_guide=1; FP_UID=dbf4c3588fcb2b02868bbca30e7228bf; __cfduid=d500f62c36a3d56bd1d44461e5e7edabe1496248275; Hm_lvt_287705c8d9e2073d13275b18dbd746dc=1497751470,1497751978,1497753745,1498046460; BAIDUID=643B5AD4CF6A1333547E2C281C81071D:FG=1; BIDUPSID=6AA41DDBFF447915026E1644ADE3DCA7; PSTM=1498548242; MCITY=-%3A; fixed_bar=1; BDRCVFR[mkUqnUt8juD]=mk3SLVN4HKm; BDORZ=FFFB88E999055A3F8A630C64834BD6D0; PSINO=5; H_PS_PSSID=1445_21095; baidu_broswer_setup_%E9%81%A5%E8%BF%9C%E7%9A%84Blade=0; BDUSS=Q1bnFYaFFhdktBTU8xbHlRalR6fjg2M3B1a1d5NHNOYzV-Y3pFdlY3U29WZDVaSVFBQUFBJCQAAAAAAAAAAAEAAABd~zoGwMfAx6Hu0KG~4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKjItlmoyLZZZ3; STOKEN=03de648ac7ebb1c2b7d5664d173561451aa43357eafb633ecd43789ceaac4fde; TIEBAUID=f986682cac14bc52fd7f2efb; FP_LASTTIME=1505151153863'
+        cookie = ''
         q = {k:v for k,v in re.findall(r'([^=]*)=([^;]*);{0,1}\s{0,1}', cookie)}
         self.r.cookies = cookiejar_from_dict(q)
         url = 'https://tieba.baidu.com'
